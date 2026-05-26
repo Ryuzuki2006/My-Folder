@@ -27,20 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
 
     function updateCarousel() {
-        const slideWidth = track.parentElement.offsetWidth;
-        
-        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        
-        infoTitle.style.opacity = 0;
-        infoText.style.opacity = 0;
-        
-        setTimeout(() => {
-            infoTitle.textContent = textData[currentIndex].title;
-            infoText.textContent = textData[currentIndex].desc;
-            infoTitle.style.opacity = 1;
-            infoText.style.opacity = 1;
-        }, 200);
-    }
+    // CHANGE THIS LINE: Force it to use the exact 320px slide width
+    const slideWidth = 320; 
+    
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    
+    infoTitle.style.opacity = 0;
+    infoText.style.opacity = 0;
+    
+    setTimeout(() => {
+        infoTitle.textContent = textData[currentIndex].title;
+        infoText.textContent = textData[currentIndex].desc;
+        infoTitle.style.opacity = 1;
+        infoText.style.opacity = 1;
+    }, 200);
+}
 
     nextBtn.addEventListener("click", () => {
         currentIndex = (currentIndex < textData.length - 1) ? currentIndex + 1 : 0;
