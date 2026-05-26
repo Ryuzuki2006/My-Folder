@@ -381,14 +381,16 @@ body {
     background-color: #fff !important;
     overflow: hidden !important; 
     position: relative !important;
+    border-radius: 14px; 
 }
 
 .achievement-card-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important;
-    padding: 30px !important;       
-    box-sizing: border-box !important;
+    object-fit: cover !important; 
+    object-position: center center !important; 
+    padding: 0 !important; 
+    margin: 0 !important;
 }
 
 .achievement-info-display {
