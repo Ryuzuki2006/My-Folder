@@ -375,18 +375,20 @@ body {
     flex: 0 0 320px;
     width: 320px;
     height: 320px;
-    display: block;
+    display: flex;             /* Changed to flex to help center content */
+    justify-content: center;   /* Centers the image horizontally */
+    align-items: center;       /* Centers the image vertically */
     background-color: #fff;
+    overflow: hidden;          /* Crucial: hides the text when we scale up the badge */
 }
 
 .achievement-card-img {
-    width: 85%;            
-    height: auto;          
-    margin: 0 auto;       
-    display: block;        
-    padding-top: 25px;    
+    width: 135%;               /* Blows up the badge size significantly */
+    height: 135%;              /* Blows up the badge size significantly */
+    object-fit: contain;       /* Keeps the badge from stretching or distorting */
+    margin-bottom: -45px;      /* Pushes the unwanted bottom text down out of view */
+    padding: 0;                /* Removes previous padding constraints */
 }
-
 .achievement-info-display {
     max-width: 500px;
     margin: 30px auto 0 auto;
