@@ -385,12 +385,13 @@ body {
 }
 
 .achievement-card-img {
-    width: 120% !important;        
-    height: 100% !important;
-    object-fit: contain !important; 
-    margin-left: -32px !important; 
-    padding: 10px 0 !important;   
+    width: 100% !important;        
+    height: 100% !important;         
+    object-fit: contain !important;  
+    object-position: center !important; 
+    padding: 20px !important;       
     box-sizing: border-box !important;
+    margin: 0 !important;           
     display: block !important;
 }
 
