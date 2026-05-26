@@ -353,8 +353,7 @@ body {
     background: #4a2c11;
 }
 
-/* --- GLOBAL STYLES (PC VIEW) --- */
-/* --- GLOBAL STYLES (PC VIEW) --- */
+
 .achievements-wrapper {
     width: 320px;
     height: 320px;
@@ -376,10 +375,9 @@ body {
 }
 
 .single-image-frame {
-    /* PC outer frame is 320px. Inside width is 320 - 12px borders = 308px */
     flex: 0 0 308px !important; 
     width: 308px !important;
-    height: 308px !important; /* FORCES IT TO REMAIN A SQUARE ON DESKTOP */
+    height: 308px !important; 
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -396,18 +394,16 @@ body {
     display: block !important;
 }
 
-/* --- MOBILE RESPONSIVE OVERRIDES --- */
 @media (max-width: 480px) {
     .achievements-wrapper {
         width: 260px !important;  
-        height: 260px !important; /* Shrinks container square */
+        height: 260px !important; 
     }
     
     .single-image-frame {
-        /* Mobile outer frame is 260px. Inside width is 260 - 12px borders = 248px */
         flex: 0 0 248px !important; 
         width: 248px !important;
-        height: 248px !important; /* FORCES IT TO REMAIN A SQUARE ON MOBILE */
+        height: 248px !important; 
     }
 }
 .achievement-info-display {
