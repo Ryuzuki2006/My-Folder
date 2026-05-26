@@ -26,7 +26,19 @@ body{
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     z-index: 1000;
 }
+.logo-container {
+    position: absolute;
+    left: 40px;
+    display: flex;
+    align-items: center;
+}
 
+.logo-img {
+    height: 100px; 
+    width: auto;
+    max-width: 1000%;
+    object-fit: contain;
+}
 
 .button-group {
     display: flex;
@@ -785,4 +797,44 @@ body{
   .contact-methods-grid {
     grid-template-columns: 1fr;
   }
+}
+.container, 
+.contact-card {
+    position: relative; 
+}
+
+.container::before,
+.contact-card::before {
+    content: "+";
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    color: #4a2c11; 
+    opacity: 0.75;
+    pointer-events: none; 
+}
+
+.container::after,
+.contact-card::after {
+    content: "✳"; 
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    color: #4a2c11;
+    opacity: 0.65;
+    pointer-events: none;
+    transform: rotate(15deg); 
+}
+
+.contact-card::before,
+.contact-card::after {
+    color: #ffe6c7; 
+    opacity: 0.8;
 }
