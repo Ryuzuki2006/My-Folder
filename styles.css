@@ -383,12 +383,13 @@ body {
 }
 
 .achievement-card-img {
-    width: 135%;               /* Blows up the badge size significantly */
-    height: 135%;              /* Blows up the badge size significantly */
-    object-fit: contain;       /* Keeps the badge from stretching or distorting */
-    margin-bottom: -45px;      /* Pushes the unwanted bottom text down out of view */
-    padding: 0;                /* Removes previous padding constraints */
+    width: 110%;           /* Scaled down slightly so it doesn't clip horizontally */
+    height: auto;          /* Maintains natural aspect ratio */
+    display: block;
+    margin: -10px auto 0 auto; /* Centers horizontally, pulls up slightly to hide top gap */
+    transform: translateY(15px); /* Cleanly pushes the image down to hide the bottom text text */
 }
+
 .achievement-info-display {
     max-width: 500px;
     margin: 30px auto 0 auto;
