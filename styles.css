@@ -353,6 +353,8 @@ body {
     background: #4a2c11;
 }
 
+/* --- GLOBAL STYLES (PC VIEW) --- */
+/* --- GLOBAL STYLES (PC VIEW) --- */
 .achievements-wrapper {
     width: 320px;
     height: 320px;
@@ -362,53 +364,50 @@ body {
     border-radius: 20px;
     border: 6px solid #7a4d21;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box !important;
 }
 
 .image-track {
-    display: flex;
+    display: flex !important;
     width: 100%;
     height: 100%;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.achievements-wrapper {
-    width: 320px;
-    height: 320px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    border-radius: 20px;
-    border: 6px solid #7a4d21;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box; 
+    box-sizing: border-box !important;
 }
 
 .single-image-frame {
-    flex: 0 0 100% !important;
-    width: 100% !important;
-    height: 100% !important;
+    /* PC outer frame is 320px. Inside width is 320 - 12px borders = 308px */
+    flex: 0 0 308px !important; 
+    width: 308px !important;
+    height: 308px !important; /* FORCES IT TO REMAIN A SQUARE ON DESKTOP */
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     background-color: #fff !important;
-    overflow: hidden !important; 
-    position: relative !important;
+    box-sizing: border-box !important;
 }
 
 .achievement-card-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important;
-    padding: 20px !important;       
+    object-fit: contain !important; 
+    padding: 20px !important;      
     box-sizing: border-box !important;
     display: block !important;
-    margin: 0 !important;
 }
 
+/* --- MOBILE RESPONSIVE OVERRIDES --- */
 @media (max-width: 480px) {
     .achievements-wrapper {
-        width: 260px;  
-        height: 260px; 
+        width: 260px !important;  
+        height: 260px !important; /* Shrinks container square */
+    }
+    
+    .single-image-frame {
+        /* Mobile outer frame is 260px. Inside width is 260 - 12px borders = 248px */
+        flex: 0 0 248px !important; 
+        width: 248px !important;
+        height: 248px !important; /* FORCES IT TO REMAIN A SQUARE ON MOBILE */
     }
 }
 .achievement-info-display {

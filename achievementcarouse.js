@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
 
     function updateCarousel() {
-    // CHANGE THIS LINE: Force it to use the exact 320px slide width
-    const slideWidth = 320; 
+    const firstSlide = track.querySelector('.single-image-frame');
+    const slideWidth = firstSlide ? firstSlide.getBoundingClientRect().width : track.parentElement.offsetWidth;
     
     track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     
