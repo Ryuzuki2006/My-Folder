@@ -371,30 +371,46 @@ body {
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+.achievements-wrapper {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    border: 6px solid #7a4d21;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; 
+}
+
 .single-image-frame {
-    flex: 0 0 320px !important;
-    width: 320px !important;
-    height: 320px !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    height: 100% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     background-color: #fff !important;
     overflow: hidden !important; 
     position: relative !important;
-    border-radius: 14px; 
 }
 
 .achievement-card-img {
-    width: 100% !important;        
-    height: 100% !important;         
-    object-fit: contain !important;  
-    object-position: center !important; 
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
     padding: 20px !important;       
     box-sizing: border-box !important;
-    margin: 0 !important;           
     display: block !important;
+    margin: 0 !important;
 }
 
+@media (max-width: 480px) {
+    .achievements-wrapper {
+        width: 260px;  
+        height: 260px; 
+    }
+}
 .achievement-info-display {
     max-width: 500px;
     margin: 30px auto 0 auto;
