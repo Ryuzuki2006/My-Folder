@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Deans List Certificate",
             desc: "Received a certificate of completion for maintaining a high GPA and demonstrating academic excellence."
+        },
+        {
+            title: "NC II Certificate",
+            desc: "Received a certificate of completion for the NC II certification in Computer Hardware Servicing."
         }
     ];
 
